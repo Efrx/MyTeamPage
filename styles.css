@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+/* font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif; */
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.info {
+    font-family: 'Poppins', sans-serif;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.info p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.info, .title {
+    flex-basis: 0;
+    flex-grow: 1;    
+    min-width: 30rem;
+}
+
+.top {
+    padding-block: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.top, .container, .footer {
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: minmax(250px, 400px);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 7rem;
+}
+
+.item {
+    position: relative;
+}
+
+.img-container {
+    position: absolute;
+    top: 10%;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content:flex-start;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.item:nth-child(3n+2){
+    position: relative;
+    top: 20%;
+}
+
+.img-container img {
+    height: 100%;
+}
+
+.item p {
+    width:max-content;
+    position: absolute;
+    top: 23%;
+    left: 75%;
+    transform: translate(0%, -25%);
+    transform: rotate(90deg);
+    margin: .5rem;
+    margin-inline-start: 1rem;
+
+    font-family: PT Serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.item h3 {
+    position: absolute;
+    margin: .5rem;
+    bottom: -1%;
+    left: 15%;
+
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer {
+    margin-block-start: 10rem;
+    margin-block-end: 2rem;
+    text-align: center;
+    color: #A9A9A9;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #A9A9A9;
+}
+
+@media (max-width: 1112px) {
+    .item:nth-child(3n+2){
+        position: relative;
+        top: 0%;
+    }
+
+    .item:nth-child(2n){
+        position: relative;
+        top: 20%;
+    }
+  }
+
+  @media (max-width: 712px) {
+    .item:nth-child(2n){
+        position: relative;
+        top: 0%;
+    }
+  }
